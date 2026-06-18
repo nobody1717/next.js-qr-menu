@@ -26,10 +26,10 @@ export default function MenuSection({ title, icon, items }) {
   };
 
   return (
-    <section className="mb-12">
+    <section className="mb-12 w-full">
       {/* Заголовок категории */}
       <motion.div 
-        className="text-center mb-8"
+        className="text-center mb-8 w-full"
         initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -38,7 +38,7 @@ export default function MenuSection({ title, icon, items }) {
         <div className="inline-block mb-3">
           <span className="text-3xl">{icon}</span>
         </div>
-        <h2 className="text-xs md:text-sm tracking-[0.3em] text-[#d4af37] uppercase font-semibold mb-3">
+        <h2 className="text-xs md:text-sm tracking-[0.3em] text-[#d4af37] uppercase font-semibold mb-3 w-full">
           {title}
         </h2>
         <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto opacity-60"></div>
@@ -46,7 +46,7 @@ export default function MenuSection({ title, icon, items }) {
       
       {/* Список блюд */}
       <motion.div 
-        className="space-y-0"
+        className="space-y-0 w-full"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -56,7 +56,7 @@ export default function MenuSection({ title, icon, items }) {
           <motion.div 
             key={item.id}
             variants={itemVariants}
-            className="group card-premium rounded-lg overflow-hidden"
+            className="group card-premium rounded-lg overflow-hidden w-full"
           >
             <button 
               onClick={() => setOpenId(openId === item.id ? null : item.id)}

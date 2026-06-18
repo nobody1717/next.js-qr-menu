@@ -103,20 +103,22 @@ export default function Home() {
 
         {/* Основное меню */}
         <motion.div 
-          className="max-w-2xl mx-auto px-4 md:px-6 py-8"
+          className="w-full flex justify-center px-4 md:px-8 py-8"
           variants={containerVariants}
           initial="hidden"
           animate={isLoaded ? "visible" : "hidden"}
         >
-          {menuData.map((section, idx) => (
-            <motion.div key={section.category} variants={itemVariants}>
-              <MenuSection 
-                title={section.category}
-                icon={section.icon}
-                items={section.items}
-              />
-            </motion.div>
-          ))}
+          <div className="w-full max-w-2xl">
+            {menuData.map((section, idx) => (
+              <motion.div key={section.category} variants={itemVariants}>
+                <MenuSection 
+                  title={section.category}
+                  icon={section.icon}
+                  items={section.items}
+                />
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Футер */}
