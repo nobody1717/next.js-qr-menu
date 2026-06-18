@@ -1,9 +1,0 @@
-/my-menu
-  /app
-    page.js           (Главная страница)
-    layout.js         (Глобальные стили/шрифты)
-  /components
-    MenuItem.jsx      (Компонент карточки блюда)
-    MenuSection.jsx   (Группировка блюд)
-  /data
-    menuData.js       (Данные меню)
